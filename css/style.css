@@ -36,3 +36,7 @@ body {
     margin: 1px;
 }
 
+.wind-arrow {
+    transition: .3s;
+}
+
