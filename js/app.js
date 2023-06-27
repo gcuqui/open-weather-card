@@ -21,4 +21,11 @@ const setValues = (weather) => {
     description.textContent = weather.weather[0].description;
     windNots.textContent = `${Number(weather.wind.speed * 1.852001).toFixed(2)} km/h`;
     windDireciton.textContent = `${weather.wind.deg} ${String.fromCharCode(176)}`;
+    setWindDirection(weather.wind.deg);
+}
+
+const setWindDirection = (degrees) => {
+    const windAngleDegrees = degrees - 90;
+    const arrowElement = document.querySelector('.wind-arrow');
+    arrowElement.style.transform = `rotate(${windAngleDegrees}deg)`;
 }
