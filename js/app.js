@@ -8,6 +8,12 @@ window.addEventListener("load", async () => {
     const weather = await getWeather(params.city, params.appId, params.lang, params.units);
     console.log(weather);
     if (weather) setValues(weather);
+    
+    // define o intervalo para atualização
+    setInterval(async () => {
+        const weather = await getWeather(params.city, params.appId, params.lang, params.units);
+        if (weather) setValues(weather);
+    }, 300000); // intervalo de 5 minutos
 });
 
 const setValues = (weather) => {
