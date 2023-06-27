@@ -12,6 +12,7 @@ body {
     font-family: 'Lato', sans-serif;
     transition: all .3s;
     font-size: 1.3rem;
+    overflow: hidden;
 }
 
 .description {
