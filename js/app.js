@@ -19,6 +19,6 @@ const setValues = (weather) => {
     icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${weather.weather[0].icon}.png" alt="${weather.weather[0].description}">`;
     temp.textContent = `${parseInt(weather.main.temp)} ${String.fromCharCode(176)}C`;
     description.textContent = weather.weather[0].description;
-    windNots.textContent = `${weather.wind.speed} nós`;
+    windNots.textContent = `${Number(weather.wind.speed * 1.852001).toFixed(2)} km/h`;
     windDireciton.textContent = `${weather.wind.deg} ${String.fromCharCode(176)}`;
 }
