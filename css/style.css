@@ -16,10 +16,8 @@ body {
 }
 
 .description {
-    position: absolute;
-    top: 2.5rem;
-    left: 46.5%;
-    
+    display: block;
+    top: 2.5rem;    
 }
 
 .overlay {
